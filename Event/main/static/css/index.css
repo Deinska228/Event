@@ -1,0 +1,252 @@
+html { overflow-x:  hidden; }
+
+header {
+    position: absolute;
+    width: 1650px;
+    height: 70px;
+    left: 0px;
+    top: 0px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.14);
+
+}
+
+button.login {
+
+    transition: transform .25s;
+    position: absolute;
+    width: 86px;
+    height: 34px;
+    left: 1279px;
+    top: 18px;
+
+    background: #001E6B;
+    border-radius: 13px;
+
+    /* Войти */
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+
+    color: #FFFFFF;
+
+    border: 0.5px solid #000000;
+
+}
+
+button.login:hover {
+
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+
+}
+
+button.login:active {
+
+    color: #000000;
+    background: #FFFFFF;
+    border: 0.5px solid #000000;
+
+}
+
+a.favorites {
+
+    transform: scale(1);
+
+    box-sizing: border-box;
+    border: 0px;
+
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    left: 1233px;
+    top: 18px;
+
+    background: #E2E2E2;
+    border-radius: 14px;
+
+    transition-property: background, transform;
+    transition-duration: .4s;
+
+
+    background-image: url("../img/favorites.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+a.favorites:hover {
+
+    transform: scale(1.2);
+
+    background-image: url("../img/favorites1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+a.favorites:active {
+
+    border: 0.5px solid #000000;
+
+}
+
+a.message {
+
+    transform: scale(1);
+
+    box-sizing: border-box;
+    border: 0px;
+
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    left: 1187px;
+    top: 18px;
+
+    background: #E2E2E2;
+    border-radius: 14px;
+
+    transition-property: background, transform;
+    transition-duration: .4s;
+
+    background-image: url("../img/message.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+a.message:hover{
+
+    transform: scale(1.2);
+
+    background-image: url("../img/message1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+a.message:active {
+
+    border: 0.5px solid #000000;
+
+}
+
+a.create_event {
+
+    transform: scale(1);
+
+    box-sizing: border-box;
+    border: 0px;
+
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    left: 1141px;
+    top: 18px;
+
+    background: #E2E2E2;
+    border-radius: 14px;
+
+    transition-property: background, transform;
+    transition-duration: .4s;
+
+    background-image: url("../img/create_event.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+a.create_event:hover{
+
+    transform: scale(1.2);
+
+    background-image: url("../img/create_event1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+a.create_event:active {
+
+    border: 0.5px solid #000000;
+
+}
+
+input.search {
+
+    border: 0px;
+
+    position: absolute;
+    width: 314px;
+    height: 34px;
+    left: 575px;
+    top: 18px;
+
+    background: #E2E2E2;
+    border-radius: 15px;
+
+    padding-left: 35px;
+
+    background-image: url("../img/search.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+
+}
+
+a.logo {
+    position: absolute;
+    width: 117px;
+    height: 36.99px;
+    left: 235px;
+    top: 17px;
+
+    background-image: url("../img/logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.top {
+
+    position: absolute;
+    width: 351px;
+    height: 43px;
+    left: 282px;
+    top: 139px;
+
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 43px;
+    line-height: 43px;
+
+    display: flex;
+    align-items: flex-end;
+    letter-spacing: -0.03em;
+
+    color: #000000;
+
+}
+
+.asd {
+
+    position: absolute;
+    left: 285px;
+    top: 1525px;
+
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 25px;
+
+    display: flex;
+    align-items: flex-end;
+    letter-spacing: -0.03em;
+
+    color: #000000;
+
+
+}
