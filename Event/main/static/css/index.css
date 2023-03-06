@@ -73,7 +73,7 @@ a.favorites {
     transition-duration: .4s;
 
 
-    background-image: url("../img/favorites.png");
+    background-image: url("../img/ico/favorites.png");
     background-size: contain;
     background-repeat: no-repeat;
 
@@ -83,7 +83,7 @@ a.favorites:hover {
 
     transform: scale(1.2);
 
-    background-image: url("../img/favorites1.png");
+    background-image: url("../img/ico/favorites1.png");
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -113,7 +113,7 @@ a.message {
     transition-property: background, transform;
     transition-duration: .4s;
 
-    background-image: url("../img/message.png");
+    background-image: url("../img/ico/message.png");
     background-size: contain;
     background-repeat: no-repeat;
 
@@ -123,7 +123,7 @@ a.message:hover{
 
     transform: scale(1.2);
 
-    background-image: url("../img/message1.png");
+    background-image: url("../img/ico/message1.png");
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -153,7 +153,7 @@ a.create_event {
     transition-property: background, transform;
     transition-duration: .4s;
 
-    background-image: url("../img/create_event.png");
+    background-image: url("../img/ico/create_event.png");
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -162,7 +162,7 @@ a.create_event:hover{
 
     transform: scale(1.2);
 
-    background-image: url("../img/create_event1.png");
+    background-image: url("../img/ico/create_event1.png");
     background-size: contain;
     background-repeat: no-repeat;
 
@@ -189,7 +189,7 @@ input.search {
 
     padding-left: 35px;
 
-    background-image: url("../img/search.png");
+    background-image: url("../img/ico/search.png");
     background-size: contain;
     background-repeat: no-repeat;
 
@@ -203,7 +203,7 @@ a.logo {
     left: 235px;
     top: 17px;
 
-    background-image: url("../img/logo.png");
+    background-image: url("../img/ico/logo.png");
     background-size: contain;
     background-repeat: no-repeat;
 }
