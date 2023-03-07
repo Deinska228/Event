@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
-    <link rel="shortcut icon" href="static/img/ico/logo.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="static/img/logo.ico" type="image/x-icon">
     <title>Event</title>
 
 </head>
@@ -15,11 +15,20 @@
     <a class="favorites"></a>
     <a class="message"></a>
     <a class="create_event"></a>
-    
-                        <!-- Временный адрес -->
-<a class="logo" href="http://127.0.0.1:8000/"></a>
+    <a class="logo" href="http://127.0.0.1:8000/"></a>
+
 </header>
 
 
+<div class="slides">
+    {% for i in carousel_object %}
+
+    <img class = "carousel" src = "{{ MEDIA_URL }}{{ i.img.url }}" >
+    {% endfor %}
+</div>
+<button id = "arrow_carousel_left" class="arrow_left"></button>
+<button id = "arrow_carousel_right" class="arrow_right"></button>
+
+<script type="text/javascript" src={% static "js/index.js" %}></script>
 </body>
 </html>

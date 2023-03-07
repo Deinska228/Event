@@ -1,9 +1,10 @@
 from django.db import models
 
-
-class Image(models.Model):
+class Carousel(models.Model):
+    
     name = models.CharField("Название", max_length=25)
     about = models.TextField("Описание")
+    img = models.ImageField('Фото', upload_to='media/carousel/')
 
 
     def __str__(self) :
