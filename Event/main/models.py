@@ -4,7 +4,7 @@ class Carousel(models.Model):
     
     name = models.CharField("Название", max_length=25)
     about = models.TextField("Описание")
-    img = models.ImageField('Фото', upload_to='media/carousel/')
+    img = models.ImageField('Фото', upload_to='carousel/')
 
 
     def __str__(self) :

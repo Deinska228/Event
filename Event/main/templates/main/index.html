@@ -6,9 +6,11 @@
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
     <link rel="shortcut icon" href="static/img/logo.ico" type="image/x-icon">
     <title>Event</title>
-
+    <script type="text/javascript" src={% static "js/index.js" %}></script>
+    
 </head>
 <body>
+
 <header>
     <input placeholder="Поиск" class=search type="text">
     <button onclick="document.location=''" class="login">Войти</button>
@@ -22,7 +24,8 @@
 
 <div class="slides">
     {% for i in carousel_object %}
-
+    <div class="carousel_name">{{i.name}}</div>
+    <!-- <div class="carousel_about">{{i.about}}</div> -->
     <img class = "carousel" src = "{{ MEDIA_URL }}{{ i.img.url }}" >
     {% endfor %}
 </div>
