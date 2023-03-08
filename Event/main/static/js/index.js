@@ -20,8 +20,6 @@ window.onload = function() {
         button_arrow_right[i].style.zIndex = 2;
         button_arrow_left[i].style.zIndex = 2;
     }
-
-    document.getElementsByClassName('arrow_left')
     for (var i = 0; i < img.length; i += 1) {
         
         if (i == img.length - 1) {
@@ -32,7 +30,7 @@ window.onload = function() {
             img[i].style.transition = "2s";
 
             carousel_name[i].style.display = "block";
-            carousel_name[i].style.left = carousel_name[i].getBoundingClientRect().left - 550 + 25 + "px";
+            carousel_name[i].style.left = carousel_name[i].getBoundingClientRect().left - 550 - 125 + "px";
             carousel_name[i].style.opacity = "0.5";
             carousel_name[i].style.zIndex = 2;
             carousel_name[i].style.transition = "2s";
@@ -45,9 +43,11 @@ window.onload = function() {
             img[i].style.opacity = "1";
 
             carousel_name[i].style.display = "block";
+            carousel_name[i].style.left = "calc(50% - 595px/2 + 57.9px)";
             carousel_name[i].style.zIndex = 4;
             carousel_name[i].style.transition = "2s";
             carousel_name[i].style.opacity = "1";
+            
 
         }
         if (i == 1) {
@@ -58,7 +58,7 @@ window.onload = function() {
             img[i].style.transition = "2s";
 
             carousel_name[i].style.display = "block";
-            carousel_name[i].style.left = img[i].getBoundingClientRect().left + 550 + 25 + "px";
+            carousel_name[i].style.left = img[i].getBoundingClientRect().left + 550 + "px";
             carousel_name[i].style.opacity = "0.5"
             carousel_name[i].style.zIndex = -1;
             carousel_name[i].style.transition = "2s";
@@ -70,7 +70,7 @@ window.onload = function() {
             img[i].style.zIndex = -1;
             img[i].style.transition = "2s";
 
-            carousel_name[i].style.left = carousel_name[i].getBoundingClientRect().left + 550 * 2 + 25 + "px";
+            carousel_name[i].style.left = carousel_name[i].getBoundingClientRect().left + 550 * 2 - 125 + "px";
             carousel_name[i].style.opacity = "0"
             carousel_name[carousel_numb_3].style.zIndex = 2;
             carousel_name[i].style.transition = "2s";
@@ -86,7 +86,7 @@ window.onload = function() {
     }
 
     function carousel() {
-        if (carousel_moving) {
+        if (carousel_moving && !document.hidden) {
             carousel_moving = false
             setTimeout(function() { carousel_moving = true }, 2001)
             for (var i = 0; i < img.length; i += 1) {
