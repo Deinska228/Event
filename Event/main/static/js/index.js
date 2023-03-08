@@ -80,15 +80,28 @@ window.onload = function() {
     }
 
     setInterval(carousel, 7 * 1000);
+    setInterval(mouse, 1);
+
+    img[carousel_numb_0].onmouseover = function(){console.log(true)}
+    img[carousel_numb_0].onmouseout = function(){console.log(false)}
+
+    function mouse(){
+        img[carousel_numb_0].onmouseover = function(){carousel_moving = false;}
+        img[carousel_numb_0].onmouseout = function(){carousel_moving = true;}
+    }
+
 
     document.querySelector("#arrow_carousel_right").onclick = function() {
         carousel()
     }
+    
 
     function carousel() {
-        if (carousel_moving && !document.hidden) {
+
+        if (carousel_moving && !document.hidden && carousel_moving) {
             carousel_moving = false
             setTimeout(function() { carousel_moving = true }, 2001)
+
             for (var i = 0; i < img.length; i += 1) {
 
                 if (carousel_numb_0 == i) {

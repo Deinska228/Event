@@ -329,12 +329,11 @@ button.arrow_right:active {
 img.carousel {
     
     opacity: 0;
-    position: fixed;
+    position: absolute ;
     width: 595px;
     height: 243px;
     left: calc(50% - 595px/2);
-    top: 175px;
-    background: #000000;
+    top: 7px;
     border-radius: 50px;
     
 }
@@ -354,9 +353,9 @@ img.carousel {
 
     opacity: 0;
     transition: 1s;
-    position: fixed;
+    position: absolute;
     left: 595px;
-    top: 200px;
+    top: 20px;
     font-size: 25px;
     text-shadow: 2px 2px 2px #000;
     color: #f3f3f3;
