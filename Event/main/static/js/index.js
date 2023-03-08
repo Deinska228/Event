@@ -162,11 +162,11 @@ window.onload = function(){
                         
                         carousel_name[carousel_numb_3].style.left= carousel_name[carousel_numb_3].getBoundingClientRect().left - 550 + 25 +"px";
                         carousel_name[carousel_numb_3].style.opacity = "0.5";
-                        carousel_name[carousel_numb_3].style.zIndex = 2;
+                        carousel_name[carousel_numb_3].style.zIndex = -1;
                         
                         img[carousel_numb_3].style.left= img[carousel_numb_3].getBoundingClientRect().left - 550 + "px";
                         img[carousel_numb_3].style.opacity = "0.5";
-                        img[carousel_numb_3].style.zIndex = -1;
+                        img[carousel_numb_3].style.zIndex = -2;
 
                     }
                     else{
