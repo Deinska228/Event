@@ -26,7 +26,7 @@ button.login {
     left: 83.25%;
     top: 18px;
 
-    background: #001E6B;
+    background: #001e6b;
     border-radius: 13px;
 
     /* Войти */
@@ -44,9 +44,7 @@ button.login {
 
 button.login:hover {
 
-    -webkit-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.2);
+    transform: scale(1.1);
 
 }
 
@@ -63,7 +61,7 @@ a.favorites {
     transform: scale(1);
 
     box-sizing: border-box;
-    border: 0px;
+    border: 1px;
 
     position: absolute;
     width: 2.2%;
@@ -78,7 +76,7 @@ a.favorites {
     transition-duration: .4s;
 
 
-    background-image: url("../img/favorites.png");
+    background-image: url("../img/header/favorites.png");
     background-size: contain;
     background-repeat: no-repeat;
 
@@ -86,11 +84,13 @@ a.favorites {
 
 a.favorites:hover {
 
-    transform: scale(1.2);
+    transform: scale(1.1);
 
-    background-image: url("../img/favorites1.png");
     background-size: contain;
     background-repeat: no-repeat;
+    border: #000000;
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+
 }
 
 a.favorites:active {
@@ -118,7 +118,7 @@ a.message {
     transition-property: background, transform;
     transition-duration: .4s;
 
-    background-image: url("../img//message.png");
+    background-image: url("../img/header//message.png");
     background-size: contain;
     background-repeat: no-repeat;
 
@@ -126,9 +126,11 @@ a.message {
 
 a.message:hover{
 
-    transform: scale(1.2);
+    transform: scale(1.1);
 
-    background-image: url("../img//message1.png");
+    border: #000000;
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -158,16 +160,18 @@ a.create_event {
     transition-property: background, transform;
     transition-duration: .4s;
 
-    background-image: url("../img//create_event.png");
+    background-image: url("../img/header//create_event.png");
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 a.create_event:hover{
 
-    transform: scale(1.2);
+    transform: scale(1.1);
 
-    background-image: url("../img//create_event1.png");
+    border: #000000;
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+
     background-size: contain;
     background-repeat: no-repeat;
 
@@ -194,11 +198,16 @@ input.search {
 
     padding-left: 35px;
 
-    background-image: url("../img//search.png");
+    background-image: url("../img/header//search.png");
     background-size: contain;
     background-repeat: no-repeat;
 
 
+}
+
+input.search {
+    border: #000000;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 a.logo {
@@ -208,7 +217,7 @@ a.logo {
     left: 15%;
     top: 17px;
 
-    background-image: url("../img//logo.png");
+    background-image: url("../img/header//logo.png");
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -273,7 +282,7 @@ button.arrow_left {
     transition-property: background, transform;
     transition-duration: .4s;
 
-    background-image: url("../img/arrow.png");
+    background-image: url("../img/header/arrow.png");
     background-size: contain;
     background-color: #000000;
 
@@ -309,7 +318,7 @@ button.arrow_right {
     transition-property: background, transform;
     transition-duration: .4s;
 
-    background-image: url("../img/arrow.png");
+    background-image: url("../img/header/arrow.png");
     background-size: contain;
     background-color: #000000;
 
@@ -333,8 +342,8 @@ img.carousel {
     width: 595px;
     height: 243px;
     left: calc(50% - 595px/2);
-    top: 7px;
-    border-radius: 50px;
+    top: 0px;
+    border-radius: 25px;
     
 }
 
@@ -342,11 +351,12 @@ img.carousel {
 .slides{
     position: relative ;
     width: calc(100% + 20px);
-    height: 257px;
+    height: 243px;
     left: calc(0% - 10px);
     top: 160px;
-    background:#000000;
+    background:#001E6B;
     z-index: -2;
+    box-shadow: 0px 0px 16px rgb(0, 0, 0);
 }
 
 .carousel_name{
@@ -359,7 +369,17 @@ img.carousel {
     font-size: 25px;
     text-shadow: 2px 2px 2px #000;
     color: #f3f3f3;
-    
-    
 
 }
+
+a.carousel_url {
+    width: 595px;
+    top: 204px;
+}
+
+
+/* .bod {
+    min-height: 100%;
+    margin: 0 auto;
+
+} */
