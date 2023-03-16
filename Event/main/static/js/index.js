@@ -80,7 +80,7 @@ window.onload = function() {
 
     }
 
-    // var a = setInterval(carousel, 4 * 1000);
+    var a = setInterval(carousel, 4 * 1000);
     setInterval(mouse, 1);
 
     img[carousel_numb_0].onmouseover = function(){console.log(true)}
@@ -187,6 +187,7 @@ window.onload = function() {
 
 
     document.querySelector("#arrow_carousel_left").onclick = function() {
+        console.log(window.innerWidth);
     }
 
 };
