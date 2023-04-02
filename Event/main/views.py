@@ -9,4 +9,4 @@ def index(request):
 
 
 def vhod(request):
-    return render(request, "vhod.html")
+    return render(request, "vhod.html", {vhod})
