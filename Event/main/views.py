@@ -9,4 +9,4 @@ def index(request):
 
 
 def vhod(request):
-    return HttpResponse("thanks!")
+    return render(request, "main/vhod.html")
