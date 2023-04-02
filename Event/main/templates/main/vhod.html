@@ -1,9 +1,78 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Привет мир</title>
+    <title>Авторизация пользователя</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        background-color: #f2f2f2;
+        font-family: Arial, sans-serif;
+      }
+      form {
+        background-color: #ffffff;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px #888888;
+        margin: 50px auto;
+        padding: 20px;
+        width: 400px;
+      }
+      h1 {
+        text-align: center;
+      }
+      input[type="text"],
+      input[type="password"] {
+        border-radius: 3px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        font-size: 16px;
+        margin: 10px 0px;
+        padding: 10px;
+        width: 100%;
+      }
+      button {
+        background-color: #4caf50;
+        border: none;
+        border-radius: 3px;
+        color: white;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 10px;
+        padding: 10px;
+        width: 100%;
+      }
+      button:hover {
+        background-color: #3e8e41;
+      }
+      .error {
+        color: red;
+        font-size: 14px;
+        margin-top: 10px;
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
-    <h1>Привет мир</h1>
+    <form>
+      <h1>Авторизация пользователя</h1>
+      <label for="username"><b>Имя пользователя</b></label>
+      <input
+        type="text"
+        placeholder="Введите имя пользователя"
+        name="username"
+        required
+      />
+
+      <label for="password"><b>Пароль</b></label>
+      <input
+        type="password"
+        placeholder="Введите пароль"
+        name="password"
+        required
+      />
+
+      <button type="submit">Войти</button>
+      <div class="error">Неправильное имя пользователя или пароль</div>
+    </form>
   </body>
 </html>
