@@ -9,5 +9,4 @@ def index(request):
 
 
 def vhod(request):
-    context = {"content": "This is the content for the second page"}
-    return render(request, "vhod.html", context)
+    return render(request, "vhod.html")
