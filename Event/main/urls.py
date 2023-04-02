@@ -7,6 +7,6 @@ from django.conf import settings
 
 urlpatterns = [
     path("", views.index, name="index"),
-    path("vhod/", views.vhod, name="vhod"),
+    path("vhod.html/", views.vhod, name="vhod"),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
