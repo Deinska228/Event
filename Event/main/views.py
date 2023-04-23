@@ -9,7 +9,7 @@ def index(request):
     return render(request, "main/index.html", {"carousel_object": carousel_object})
 
 
-def login(request):
+def vhod(request):
     if request.method == "POST":
         form = UserForm(request.POST)
         if form.is_valid():
@@ -20,8 +20,4 @@ def login(request):
             return redirect("index")
     else:
         form = UserForm()
-    return render(request, "vhod.html", {"form": form})
-
-
-def vhod(request):
-    return render(request, "main/vhod.html")
+    return render(request, "main/vhod.html", {"form": form})
