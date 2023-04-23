@@ -1,8 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from .models import Carousel
-from django.contrib.auth import authenticate, login
-from .forms import MyAuthenticationForm
+from .models import Carousel, User
+from .forms import UserForm
 
 
 def index(request):
@@ -10,21 +9,18 @@ def index(request):
     return render(request, "main/index.html", {"carousel_object": carousel_object})
 
 
-def login_view(request):
+def login(request):
     if request.method == "POST":
-        form = MyAuthenticationForm(request, data=request.POST)
+        form = UserForm(request.POST)
         if form.is_valid():
-            email = form.cleaned_data.get("username")
-            password = form.cleaned_data.get("password")
-            user = authenticate(request, email=email, password=password)
-            if user is not None:
-                login(request, user)
-                return redirect("home")
-            else:
-                form.add_error(None, "Invalid email or password")
+            username = form.cleaned_data["username"]
+            password = form.cleaned_data["password"]
+            user = User(username=username, password=password)
+            user.save()
+            return redirect("index")
     else:
-        form = MyAuthenticationForm(request)
-    return render(request, "login.html", {"form": form})
+        form = UserForm()
+    return render(request, "vhod.html", {"form": form})
 
 
 def vhod(request):

@@ -1,6 +1,6 @@
 from django import forms
-from django.contrib.auth.forms import AuthenticationForm
 
 
-class MyAuthenticationForm(AuthenticationForm):
-    username = forms.EmailField(widget=forms.TextInput(attrs={"autofocus": True}))
+class UserForm(forms.Form):
+    username = forms.CharField(max_length=50)
+    password = forms.CharField(widget=forms.PasswordInput)
