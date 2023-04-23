@@ -1,0 +1,15 @@
+html { 
+    
+    overflow-x:  hidden; 
+    overflow-y:  hidden; 
+}
+
+.map{
+    width: 100vw;
+    height: 100vw;
+
+}
+
+[class*="copyrights-pane"] {
+    display: none !important;
+  }

@@ -1,0 +1,18 @@
+{% extends 'layout.html'%}
+{% load static %}
+{% block content %}
+    
+    <div class="slides">
+        <button id = "arrow_carousel_left" class="arrow_left"></button>
+        <button id = "arrow_carousel_right" class="arrow_right"></button>
+        {% for i in carousel_object %}
+        <div class="carousel_name">{{i.name}}</div>
+       
+        <img class = "carousel" src = "{{ MEDIA_URL }}{{ i.img.url }}" >
+        {% endfor %}
+
+    </div>
+    
+
+<script type="text/javascript" src={% static "js/index.js" %}></script>
+{% endblock %}

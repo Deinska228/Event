@@ -7,5 +7,6 @@ from django.conf import settings
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('Maps', views.map, name='Maps')
 ] 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

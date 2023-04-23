@@ -11,3 +11,9 @@ class Carousel(models.Model):
     def __str__(self) :
         return self.name
 
+# class PlaceMark(models.Model):
+
+#     name = models.CharField("Название", max_length=25)
+#     about = models.TextField("Описание")
+#     img = models.ImageField('Фото', upload_to='carousel/')
+#     urls = models.TextField("Ссылка")
