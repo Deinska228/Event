@@ -7,6 +7,8 @@ from django.conf import settings
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('Maps', views.map, name='Maps')
+    path('Maps', views.maps, name='Maps'),
+    path("login", views.login, name="login"),
+    path("register", views.register, name="register"),
 ] 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

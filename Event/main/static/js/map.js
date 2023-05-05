@@ -1,18 +1,25 @@
 
+var myMap;
+
+ymaps.ready(init);
+
 function init(){
 
     var map = new ymaps.Map('map', {
-center: [57.13316778846787,65.53778233068846],
-zoom : 14
-
+center: [57.15101250184789,65.5378306104507],
+zoom : 17,
+behaviors: ['default', 'scrollZoom']
+},{
+  searchControlProvider: 'yandex#search'
 });
 
-var placemark = new ymaps.Placemark([57.15117098715473,65.53784165745896], {}, {
+var placemark = new ymaps.Placemark([57.15252642017175,65.53638864151911], {}, {
     iconLayout: "default#image",
     iconImageHref: "../img/header/arrow.png",
     iconImageSize: [20, 20],
     iconImageOffset: [-20, -20]
 });
+
 map.geoObjects.add(placemark);
 
 // map.controls.remove('geolocationControl'); // удаляем геолокацию

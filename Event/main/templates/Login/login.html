@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <title>Авторизация</title>
+    <link rel="shortcut icon" href="static/img/header/logo.ico" type="image/x-icon">
+
+  </head>
+  <body>
+    <form method="post">
+      {% csrf_token %}
+      
+      <h1>Авторизация</h1>
+      <div class =' name_login' >Имя пользователя:</div>
+      {{ form.username }}
+      <div class =' name_password' >Пароль:</div>
+      {{ form.password }}
+      <span class="error">{{ error }}</span>
+
+      <button type="submit">Войти</button>
+      <a class="register" href="{% url 'register'%}">Создать аккаунт</a>
+    </form>
+  </body>
+</html>
