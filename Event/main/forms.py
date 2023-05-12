@@ -5,7 +5,7 @@ from django.forms import ModelForm, TextInput
 class UserForm(ModelForm):
     class Meta:
         model = User
-        fields = ['username', 'password']
+        fields = ['username', 'password', 'password']
 
         widgets = {
             'username': TextInput(attrs={

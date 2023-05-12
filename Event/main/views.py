@@ -42,14 +42,20 @@ def register(request):
     form = UserForm()
     error = ''
     if request.method == "POST":
+        print()
         form = UserForm(request.POST)
         All_object = User.objects.all()
         if form.is_valid():
             if str(form["username"].value()) not in list(map(str, All_object)):
-                form.save()
-                return redirect("index")
+                if str(form["password"].value()) == request.POST['password_repeat']:
+                    form.save()
+                    return redirect("index")
+                else:
+                    error = "Пороли не совпадают"
             else:
                 error = "Логин занят"
+            
+
                     
                 
     data = {
