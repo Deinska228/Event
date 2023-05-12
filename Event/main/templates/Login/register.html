@@ -20,7 +20,7 @@
       <div class =' name_password' >Пароль:</div>
       {{ form.password }}
       <div class =' name_password' >Повтор пароля:</div>
-      <input type="password" name="password_repeat" value={{password_repeat}}>
+      <input type="password" placeholder="Введите повтор пароль" class ='password' name="password_repeat" value={{password_repeat}}>
       <span class="error">{{ error }}</span>
 
       <button type="submit">Зарегистрироваться</button>
