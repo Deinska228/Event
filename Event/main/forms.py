@@ -1,6 +1,12 @@
-from django import forms
 
-
-class UserForm(forms.Form):
-    username = forms.CharField(max_length=50)
-    password = forms.CharField(widget=forms.PasswordInput)
+        widgets = {
+            'username': TextInput(attrs={
+                'class': 'login',
+                'placeholder': 'Введите имя пользователя'
+            }),
+            'password': TextInput(attrs={
+                'class': 'password',
+                'placeholder': 'Введите пароль',
+                'type': "password"
+            })
+        }

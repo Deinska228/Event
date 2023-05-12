@@ -1,0 +1,281 @@
+header {
+
+    width: 100vw;
+    height: 67px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.14);
+
+}
+
+.wrapper_header {
+
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+a.logo {
+    display: inline-flex;
+    position: relative;
+    width: 110px;
+    height: 37px;
+
+    margin-top: 17px;
+    /* margin-right: 9px; */
+
+    background-image: url("../img/header//logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+input.search {
+    display: inline-flex;
+    position: relative;
+    width: 349px;
+    height: 30px;
+    margin-left: 132px;
+    margin-right: 132px;
+    margin-top: 20px;
+
+    outline:none;
+
+    border: 0px;
+
+    background: #E2E2E2;
+    border-radius: 15px;
+
+    font-size: 16px;
+
+    padding-left: 35px;
+
+    background-image: url("../img/header//search.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+
+
+}
+
+.search:focus {
+    border: 0px;
+  }
+
+a.create_event {
+    
+    transform: scale(1);
+    
+    box-sizing: border-box;
+    border: 0px;
+    
+    display: block;
+    position: relative;
+    width: 34px;
+    height: 34px;
+    top: 18px;
+    /* margin-left: 9px; */
+    margin-right: 9px;
+    
+    background: #E2E2E2;
+    border-radius: 14px;
+    
+    transition-property: background, transform;
+    transition-duration: .4s;
+    
+    background-image: url("../img/header//create_event.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+a.create_event:hover{
+    
+    transform: scale(1.1);
+    
+    border: #000000;
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+    
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
+
+a.create_event:active {
+    
+    border: 0.5px solid #000000;
+    
+}
+
+a.message {
+    
+    transform: scale(1);
+
+    box-sizing: border-box;
+    border: 0px;
+    
+    display: block;
+    position: relative;
+    width: 34px;
+    height: 34px;
+    top: 18px;
+    margin-right: 9px;
+    
+    background: #E2E2E2;
+    border-radius: 14px;
+    
+    transition-property: background, transform;
+    transition-duration: .4s;
+    
+    background-image: url("../img/header//message.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
+
+a.message:hover{
+    
+    transform: scale(1.1);
+    
+    border: #000000;
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+    
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+a.message:active {
+
+    border: 0.5px solid #000000;
+    
+}
+
+a.favorites {
+    
+    transform: scale(1);
+    
+    box-sizing: border-box;
+    border: 1px;
+    
+    display: block;
+    position: relative;
+    width: 34px;
+    height: 34px;
+    top: 18px;
+    margin-right: 9px;
+    
+    background: #E2E2E2;
+    border-radius: 14px;
+
+    transition-property: background, transform;
+    transition-duration: .4s;
+    
+    
+    background-image: url("../img/header/favorites.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
+
+a.favorites:hover {
+    
+    transform: scale(1.1);
+    
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: #000000;
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+    
+}
+
+a.favorites:active {
+
+    border: 0.5px solid #000000;
+    
+}
+
+button.login {
+
+    transition: transform .25s;
+
+    display: block;
+    position: relative;
+    width: 86px;
+    height: 34px;
+    top: 18px;
+    margin: 0 auto;
+
+    background: #001e6b;
+    border-radius: 13px;
+
+    /* Войти */
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+
+    color: #ffffff;
+
+    border: 0;
+
+}
+
+button.login:hover {
+
+    transform: scale(1.1);
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+
+}
+
+button.login:active {
+
+    color: #000000;
+    background: #FFFFFF;
+    border: 0.5px solid #000000;
+
+}
+
+a.maps_ {
+    
+    transform: scale(1);
+    
+    box-sizing: border-box;
+    border: 1px;
+    
+    display: block;
+    position: relative;
+    width: 34px;
+    height: 34px;
+    top: 18px;
+    margin-right: 9px;
+    
+    background: #E2E2E2;
+    border-radius: 14px;
+
+    transition-property: background, transform;
+    transition-duration: .4s;
+    
+    
+    background-image: url("../img/header/maps.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
+
+a.maps_:hover {
+    
+    transform: scale(1.1);
+    
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: #000000;
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+    
+}
+
+a.maps_:active {
+
+    border: 0.5px solid #000000;
+    
+}
