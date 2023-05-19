@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <h3>{% user_display user %}</h3>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="{% static 'css/login.css' %}" />
@@ -25,7 +24,7 @@
       <span class="error">{{ error }}</span>
 
       <button type="submit">Войти</button>
-      <a class="register" href="{% url 'register'%}"> аккаунт</a>
+      <a class="register" href="{% url 'register'%}">{% user_display user %}</a>
     </form>
   </body>
 </html>
