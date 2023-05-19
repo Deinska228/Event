@@ -4,6 +4,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="google-signin-client_id"
+      content="1083226940172-92k0j2eu2ogi19vjv3hfl9ar6np4fkc9.apps.googleusercontent.com"
+    />
     <link rel="stylesheet" href="{% static 'css/login.css' %}" />
     <title>Авторизация</title>
     <link
@@ -24,7 +28,39 @@
       <span class="error">{{ error }}</span>
 
       <button type="submit">Войти</button>
-      <a class="register" href="{% url 'register'%}">{% user_display user %}</a>
+      <a class="register" href="{% url 'register'%}">Создать аккаунт</a>
+
+      <div id="my-signin"></div>
+
+      <script>
+        function onSuccess(googleUser){
+          let profile = googleUser.getBasicProfile()
+          console.log('Email: ' + profile.getEmail())
+          let token = googleUser.getAuthResponse().id_token
+          console.log('Token: ' + token)
+        }
+
+        function onFailure(error){
+          console.log(error)
+        }
+
+        function renderButton(){
+          gapi.signin2.render('mi-signin', {
+            'scope': 'profile email',
+            'width': 240,
+            'height': 50,
+            'longtitle': true,
+            'theme': 'dark',
+            'onsuccess': onSuccess
+            'onfailure': onfailure
+          })
+        }
+      </script>
     </form>
+    <script
+      src="https://apis.google.com/js/platform.js?onload=renderButton"
+      async
+      defer
+    ></script>
   </body>
 </html>
