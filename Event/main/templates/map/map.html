@@ -5,7 +5,8 @@
 
     <!-- <div style="display: none" id="jsonData" data-json="{{ data }}"></div> -->
     <div id="map" class="map">
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=05e45c33-9092-43bc-832b-dcc6b87110ba&width=100%&height=100%&lang=ru_RU" type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=05e45c33-9092-43bc-832b-dcc6b87110ba&width=100%&height=100%&lang=ru_RU&modules=regions~plainstyle" type="text/javascript"></script>
     <script type="text/javascript" src={% static "js/map.js" %}></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     </div>
 {% endblock %}
