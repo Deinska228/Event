@@ -4,10 +4,6 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="google-signin-client_id"
-      content="1083226940172-92k0j2eu2ogi19vjv3hfl9ar6np4fkc9.apps.googleusercontent.com"
-    />
     <link rel="stylesheet" href="{% static 'css/login.css' %}" />
     <title>Авторизация</title>
     <link
@@ -33,7 +29,7 @@
       <div
         id="g_id_onload"
         data-client_id="1083226940172-92k0j2eu2ogi19vjv3hfl9ar6np4fkc9.apps.googleusercontent.com"
-        data-login_uri="https://your.domain/your_login_endpoint"
+        data-callback="http://localhost:8000/login"
         data-auto_prompt="false"
       ></div>
       <div
