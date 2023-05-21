@@ -29,38 +29,22 @@
 
       <button type="submit">Войти</button>
       <a class="register" href="{% url 'register'%}">Создать аккаунт</a>
-
-      <div id="my-signin"></div>
-
-      <script>
-        function onSuccess(googleUser){
-          let profile = googleUser.getBasicProfile()
-          console.log('Email: ' + profile.getEmail())
-          let token = googleUser.getAuthResponse().id_token
-          console.log('Token: ' + token)
-        }
-
-        function onFailure(error){
-          console.log(error)
-        }
-
-        function renderButton(){
-          gapi.signin2.render('mi-signin', {
-            'scope': 'profile email',
-            'width': 240,
-            'height': 50,
-            'longtitle': true,
-            'theme': 'dark',
-            'onsuccess': onSuccess
-            'onfailure': onfailure
-          })
-        }
-      </script>
+      <script src="https://accounts.google.com/gsi/client" async defer></script>
+      <div
+        id="g_id_onload"
+        data-client_id="1083226940172-92k0j2eu2ogi19vjv3hfl9ar6np4fkc9.apps.googleusercontent.com"
+        data-login_uri="https://your.domain/your_login_endpoint"
+        data-auto_prompt="false"
+      ></div>
+      <div
+        class="g_id_signin"
+        data-type="standard"
+        data-size="large"
+        data-theme="outline"
+        data-text="sign_in_with"
+        data-shape="rectangular"
+        data-logo_alignment="left"
+      ></div>
     </form>
-    <script
-      src="https://apis.google.com/js/platform.js?onload=renderButton"
-      async
-      defer
-    ></script>
   </body>
 </html>
