@@ -25,14 +25,9 @@
         <a class="create_event"></a>
         <a class="message"></a>
         <a class="favorites"></a>
-        <script>
-          {% if user.is_authenticated %}
-              <h3>{{user.username}}</h3>
-          {% else %}
-           <button onclick="document.location" ="login" class="login">
-                Войти
-           </button>
-        </script>
+        <button onclick="document.location" ="login" class="login">
+          Войти
+        </button>
       </div>
     </header>
     {% block content %}{% endblock %}
