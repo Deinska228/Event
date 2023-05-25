@@ -1,18 +1,83 @@
-html, body {
-    width: 100%;
-    height: 95%;
-    margin: 0;
-    padding: 0px;
-    font-family: Arial;
-    font-size: 14px;
+html { 
+    
+    overflow-x:  hidden; 
+    overflow-y:  hidden; 
 }
 
 .map{
-    width: 100%  !important;
-    height: 100%  !important;
+    width: 100vw !important;
+    height: 100vw !important;
 
 }
 
 [class*="copyrights-pane"] {
     display: none !important;
   }
+
+p {
+    text-indent: 20px; 
+   }
+
+.balloon a {
+    color: #1eb0ff;
+}
+
+.balloon{
+    background-color: #001e6b;
+    color: #fff;
+    padding: 15px;
+    border-radius: 15px !important;
+}
+
+.balloon img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    box-shadow: 0 0 25px #3770ff; /* Параметры тени */
+    margin-bottom: 10px;
+    border-radius: 15px !important;
+    max-height: 200px !important;
+    max-width: auto !important;
+    
+
+}
+
+.ymaps-2-1-79-map ymaps, .ymaps-2-1-79-map ymaps:after, .ymaps-2-1-79-map ymaps:before{
+    border-radius: 25px !important;
+}
+.name{
+    text-align: center;
+    font-size: 24px !important;
+    margin-bottom: 10px;
+}
+
+
+
+.ymaps-2-1-79-balloon__content {
+    margin:0 !important;
+    padding:0 !important;
+    font-size: 18px !important;
+    border-radius: 15px !important;
+    
+}
+
+
+.ymaps-2-1-79-balloon__close-button{
+    width: 25px !important;
+    height: 25px !important;
+    background: url("../img/map/cross.png") no-repeat !important;
+    background-size: 100% !important;
+    background-position: right top !important;
+    opacity: .75 !important;
+    margin-top: 5px;
+    margin-right: 10px;
+    /* box-shadow: 0px 0px 15px rgb(255, 255, 255) !important; */
+    border-radius: 0px !important;
+
+}
+
+
+
+
+

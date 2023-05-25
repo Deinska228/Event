@@ -1,7 +1,7 @@
 {% extends 'layout.html'%}
 {% load static %}
 {% block content %}
-    
+ 
     <div class="slides">
         <button id = "arrow_carousel_left" class="arrow_left"></button>
         <button id = "arrow_carousel_right" class="arrow_right"></button>
@@ -14,8 +14,8 @@
     </div>
     
     <div class = "start">
-        <button onclick=document.location='' class="Create"></button>
-        <button onclick=document.location='' class="Search"></button>
+        <button onclick=document.location='{% url "Maps"%}' class="Search">На карту</button>
+        <button onclick=document.location='' class="Create">Создать событие</button>
     </div>
 
 <script type="text/javascript" src={% static "js/index.js" %}></script>
