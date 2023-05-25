@@ -4,7 +4,7 @@ from .models import Carousel, User
 from django.core import serializers
 import json
 from django.views.decorators.csrf import csrf_exempt
-
+from django.contrib.auth import logout
 from .forms import UserForm
 
 
@@ -22,6 +22,10 @@ def maps(request):
 @csrf_exempt
 def login(request):
     form = UserForm()
+    if request.user.is_authenticated:
+        print("Already logged in")
+    else:
+        print("n")
     error = ""
     if request.method == "POST":
         form = UserForm(request.POST)
@@ -57,7 +61,7 @@ def register(request):
                     form.save()
                     return redirect("index")
                 else:
-                    error = "Пороли не совпадают"
+                    error = "Пароли не совпадают"
             else:
                 error = "Логин занят"
 
