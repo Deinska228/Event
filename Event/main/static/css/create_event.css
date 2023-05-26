@@ -1,0 +1,269 @@
+html { overflow-x:  hidden; }
+
+
+a.createevent {
+    position: absolute;
+    width: 400px;
+    height: 40px;
+    left: 335px;
+    top: 110px;
+
+    font-family: 'Arial';
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 40px;
+
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
+}
+
+input.inputname {
+
+    position: absolute;
+    width: 331px;
+    height: 53px;
+    left: 356px;
+    top: 226px;
+
+    border-style: none;
+    outline: none;
+
+    background: #EEEEEE;
+    border-radius: 16px;
+
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 26px;
+    line-height: 26px;
+    padding-left: 20px;
+
+    display: flex;
+    align-items: center;
+
+    color: #757575;
+    
+}
+
+select.selcet_category {
+
+    position: absolute;
+    width: 351px;
+    height: 53px;
+    left: 356px;
+    top: 304px;
+    
+    outline: none;
+    border-style: none;
+
+    background: #EEEEEE;
+    border-radius: 16px;
+
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 26px;
+    line-height: 26px;
+    padding-left: 20px;
+    color: #757575;
+
+    }
+
+
+select.selcet_entry {
+
+    position: absolute;
+    width: 351px;
+    height: 53px;
+    left: 356px;
+    top: 382px;
+
+    outline: none;
+    border-style: none;
+
+    background: #EEEEEE;
+    border-radius: 16px;
+
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 26px;
+    line-height: 26px;
+    padding-left: 20px;
+    color: #757575;
+
+    }
+
+
+
+select.selcet_age {
+
+    position: absolute;
+    width: 351px;
+    height: 53px;
+    left: 356px;
+    top: 460px;
+
+    outline: none;
+    border-style: none;
+
+    background: #EEEEEE;
+    border-radius: 16px;
+
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 26px;
+    line-height: 26px;
+    padding-left: 20px;
+    color: #757575;
+
+}
+
+input.inputdate{
+    position: absolute;
+    width: 331px;
+    height: 53px;
+    left: 356px;
+    top: 538px;
+
+    outline: none;
+    border-style: none;
+
+    background: #EEEEEE;
+    border-radius: 16px;
+
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 26px;
+    line-height: 26px;
+    padding-left: 20px;
+    color: #757575;
+}
+
+input.inputplace{
+    position: absolute;
+    width: 331px;
+    height: 53px;
+    left: 356px;
+    top: 616px;
+
+    outline: none;
+    border-style: none;
+
+    background: #EEEEEE;
+    border-radius: 16px;
+
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 26px;
+    line-height: 26px;
+    padding-left: 20px;
+    color: #757575;
+}
+
+textarea.inputtext {
+    position: absolute;
+    width: 491px;
+    height: 287px;
+    left: 829px;
+    top: 226px;
+
+    outline: none;
+    border-style: none;
+
+    background: #EEEEEE;
+    border-radius: 16px;
+
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 26px;
+    line-height: 26px;
+    padding-left: 20px;
+    padding-top : 20px;
+    color: #757575;
+}
+
+
+.input__wrapper {
+    position: absolute;
+    width: 391px;
+    height: 87px;
+    left: 929px;
+    top: 552px;
+
+    background: #EEEEEE;
+    border-radius: 25px;
+  }
+   
+  .input__file {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+  }
+   
+
+   
+.input__file-button-text {
+    line-height: 1;
+    margin-top: 1px;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 26px;
+    line-height: 26px;
+    color: #757575;
+    padding-left: 20px;
+  }
+   
+  .input__file-button {
+    width: 100%;
+    width: 391px;
+    height: 87px;
+    background: #EEEEEE;
+    color: #757575;
+    font-size: 1.125rem;
+    font-weight: 700;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 0 auto;
+  }
+
+button.btncreate{
+    position: absolute;
+    width: 309px;
+    height: 53px;
+    left: 1026px;
+    top: 864px;
+    
+    background: #0044BB;
+    border-radius: 16px;
+
+    outline: none;
+    border-style: none;
+
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 26px;
+    color: #ffffff;
+
+}    

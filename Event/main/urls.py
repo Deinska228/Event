@@ -10,5 +10,11 @@ urlpatterns = [
     path("Maps", views.maps, name="Maps"),
     path("login", views.login, name="login"),
     path("register", views.register, name="register"),
+<<<<<<< HEAD
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+=======
+    path("create", views.create, name="create"),
+] 
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+>>>>>>> 1
