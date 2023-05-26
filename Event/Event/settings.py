@@ -34,7 +34,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-
     "main",
     "django.contrib.admin",
     "django.contrib.auth",
@@ -42,6 +41,11 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django.contrib.sites",
+    "allauth",
+    "allauth.account",
+    "allauth.socialaccount",
+    "allauth.socialaccount.providers.google",
 ]
 
 MIDDLEWARE = [
@@ -58,15 +62,15 @@ ROOT_URLCONF = "Event.urls"
 
 TEMPLATES = [
     {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
+        "BACKEND": "django.template.backends.django.DjangoTemplates",
+        "DIRS": [os.path.join(BASE_DIR, "templates")],
+        "APP_DIRS": True,
+        "OPTIONS": {
+            "context_processors": [
+                "django.template.context_processors.debug",
+                "django.template.context_processors.request",
+                "django.contrib.auth.context_processors.auth",
+                "django.contrib.messages.context_processors.messages",
             ],
         },
     },
@@ -78,7 +82,7 @@ WSGI_APPLICATION = "Event.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-SESSION_ENGINE = 'django.contrib.sessions.backends.signed_cookies'
+SESSION_ENGINE = "django.contrib.sessions.backends.signed_cookies"
 
 
 DATABASES = {
@@ -119,16 +123,19 @@ USE_I18N = True
 
 USE_TZ = True
 
+SECURE_CROSS_ORIGIN_OPENER_POLICY = "same-origin-allow-popups"
+
+SESSION_ENGINE = "django.contrib.sessions.backends.db"
+SESSION_COOKIE_NAME = "sessionid"
+SESSION_SAVE_EVERY_REQUEST = False
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 
-
-
-STATIC_URL = '/static/'
-MEDIA_URL = 'img/'
-MEDIA_ROOT = 'main/static/img'
+STATIC_URL = "/static/"
+MEDIA_URL = "img/"
+MEDIA_ROOT = "main/static/img"
 
 # STATICFILES_DIRS = [
 #     (os.path.join(BASE_DIR,'static')),
@@ -139,3 +146,12 @@ MEDIA_ROOT = 'main/static/img'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+AUTHENTICATION_BACKENDS = [
+    # Needed to login by username in Django admin, regardless of `allauth`
+    "django.contrib.auth.backends.ModelBackend",
+    # `allauth` specific authentication methods, such as login by e-mail
+    "allauth.account.auth_backends.AuthenticationBackend",
+]
+
+SITE_ID = 1

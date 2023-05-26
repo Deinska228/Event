@@ -2,27 +2,46 @@
 <!DOCTYPE html>
 <html>
   <head>
-    
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}" />
     <title>Авторизация</title>
-    <link rel="shortcut icon" href="static/img/header/logo.ico" type="image/x-icon">
-
+    <link
+      rel="shortcut icon"
+      href="static/img/header/logo.ico"
+      type="image/x-icon"
+    />
   </head>
   <body>
     <form method="post">
       {% csrf_token %}
-      
+
       <h1>Авторизация</h1>
-      <div class =' name_login' >Имя пользователя:</div>
+      <div class="name_login">Имя пользователя:</div>
       {{ form.username }}
-      <div class =' name_password' >Пароль:</div>
+      <div class="name_password">Пароль:</div>
       {{ form.password }}
       <span class="error">{{ error }}</span>
 
       <button type="submit">Войти</button>
       <a class="register" href="{% url 'register'%}">Создать аккаунт</a>
+
+      <script src="https://accounts.google.com/gsi/client" async defer></script>
+      <div
+        id="g_id_onload"
+        data-client_id="1083226940172-92k0j2eu2ogi19vjv3hfl9ar6np4fkc9.apps.googleusercontent.com"
+        data-login_uri="http://localhost:8000/login"
+        data-auto_prompt="false"
+      ></div>
+      <div
+        class="g_id_signin"
+        data-type="icon"
+        data-size="large"
+        data-theme="outline"
+        data-text="sign_in_with"
+        data-shape="rectangular"
+        data-logo_alignment="left"
+      ></div>
     </form>
   </body>
 </html>
