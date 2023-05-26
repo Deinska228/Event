@@ -24,16 +24,8 @@ def maps(request):
 @csrf_exempt
 def login(request):
     form = UserForm()
-<<<<<<< HEAD
-    if request.user.is_authenticated:
-        print("Already logged in")
-    else:
-        print("n")
     error = ""
-=======
-    error = ''
-    print(request.session.items() )
->>>>>>> 1
+    print(request.session.items())
     if request.method == "POST":
         form = UserForm(request.POST)
         All_object = User.objects.all()
@@ -72,20 +64,10 @@ def register(request):
             else:
                 error = "Логин занят"
 
-<<<<<<< HEAD
     data = {"form": form, "error": error}
 
     return render(request, "Login/register.html", data)
-=======
-                    
-                
-    data = {
-        'form': form,
-        'error': error
-    }
-    
-    return render(request, "Login/register.html", data)
+
 
 def create(request):
-    return render(request, 'create/create.html')
->>>>>>> 1
+    return render(request, "create/create.html")
