@@ -1,11 +1,12 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from .models import Carousel, User
+from .models import Carousel
 from django.core import serializers
 import json
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth import logout
 from .forms import UserForm
+from django.contrib.auth.models import User
 
 
 def index(request):
@@ -14,6 +15,7 @@ def index(request):
 
 
 def maps(request):
+    logout(request)
     Carousel_json = serializers.serialize("json", Carousel.objects.all())
     data = json.loads(Carousel_json)
     return render(request, "map/map.html", {"data": Carousel_json})
