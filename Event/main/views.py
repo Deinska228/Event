@@ -19,6 +19,7 @@ def maps(request):
 def login(request):
     form = UserForm()
     error = ''
+    print(request.session.items() )
     if request.method == "POST":
         form = UserForm(request.POST)
         All_object = User.objects.all()
@@ -64,3 +65,6 @@ def register(request):
     }
     
     return render(request, "Login/register.html", data)
+
+def create(request):
+    return render(request, 'create/create.html')

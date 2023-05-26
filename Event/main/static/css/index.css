@@ -22,7 +22,7 @@ img.carousel {
 }
 
 .slides{
-    position: relative ;
+    position: relative;
     width: calc(100% + 20px);
     height: 243px;
     left: calc(0% - 10px);
