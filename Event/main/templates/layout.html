@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="{% static 'css/map.css' %}">
     <link rel="stylesheet" href="{% static 'css/header.css' %}">
     <link rel="shortcut icon" href="static/img/header/logo.ico" type="image/x-icon">
-    <link rel="stylesheet" href="{% static 'css/create_event.css' %}">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Event</title>
     {% block link %}{%endblock%}
@@ -23,10 +22,14 @@
         <a class="logo" href="{% url 'index'%}"></a>
         <input placeholder="Поиск" class=search type="text">
         <a class="maps_" href="{% url 'Maps'%}"></a>
-        <a class="create_event" href="{% url 'create'%}"></a>
+        <a class="create_event"></a>
         <a class="message"></a>
         <a class="favorites"></a>
+        {% if user.is_authenticated %}
+        <button onclick=document.location='login' class="login">Выйти</button>
+        {% else %}
         <button onclick=document.location='login' class="login">Войти</button>
+        {% endif %}
     </div>
 
 </header>
