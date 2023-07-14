@@ -1,11 +1,12 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from .models import Carousel, User
+from .models import Carousel
 from django.core import serializers
 import json
 from django.views.decorators.csrf import csrf_exempt
-
-from .forms import UserForm
+from django.contrib.auth.models import User
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import authenticate, login
 
 
 def index(request):
@@ -20,37 +21,22 @@ def maps(request):
 
 
 @csrf_exempt
-def login(request):
-    form = UserForm()
-    error = ""
-    print(request.session.items())
-    if request.method == "POST":
-        form = UserForm(request.POST)
-        All_object = User.objects.all()
-        if form.is_valid():
-            if str(form["username"].value()) in list(map(str, All_object)):
-                if str(
-                    All_object[
-                        list(map(str, All_object)).index(str(form["username"].value()))
-                    ].password
-                ) == str(form["password"].value()):
-                    return redirect("index")
-                else:
-                    error = "Неверный логин или пароль"
-            else:
-                error = "Неверный логин или пароль"
-
-    data = {"form": form, "error": error}
+def my_view(request):
+    username = request.POST["username"]
+    password = request.POST["password"]
+    user = authenticate(request, username=username, password=password)
+    if user is not None:
+        login(request, user)
 
     return render(request, "Login/login.html", data)
 
 
 def register(request):
-    form = UserForm()
+    form = UserCreationForm()
     error = ""
     if request.method == "POST":
         print()
-        form = UserForm(request.POST)
+        form = UserCreationForm(request.POST)
         All_object = User.objects.all()
         if form.is_valid():
             if str(form["username"].value()) not in list(map(str, All_object)):
@@ -58,7 +44,7 @@ def register(request):
                     form.save()
                     return redirect("index")
                 else:
-                    error = "Пороли не совпадают"
+                    error = "Пароли не совпадают"
             else:
                 error = "Логин занят"
 

@@ -1,90 +1,33 @@
 {% extends 'layout.html'%}
 {% load static %}
 {% block content %}
-<div class="pagecreateevent">
-    <a class="createevent" >Создать событие</a>
-    <div class="parameters">
-        <input class="inputname" type="text" id="input-name" name="input-name" placeholder="Название:">
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Тестирование</title>
+</head>
+<body>
+    <h1>Тестирование</h1>
 
-        <select class="selcet_category">
-            <option value="" disabled>Категория</option>
-            <option value="1">Спорт</option>
-            <option value="2">Отдых</option>
-            <option value="3">Развитие</option>
-            <option value="4">Общение</option>
-            <option value="5">Развлечения</option>
-        </select>
+    <form>
+        <h2>Вопрос 1: Уникальный выбор</h2>
+        <p>Выберите один вариант ответа:</p>
+        <input type="radio" name="question1" value="option1"> Вариант 1<br>
+        <input type="radio" name="question1" value="option2"> Вариант 2<br>
+        <input type="radio" name="question1" value="option3"> Вариант 3<br>
 
-        <select class="selcet_entry">
-            <option value="" disabled>Вход</option>
-            <option value="1">Платно</option>
-            <option value="2">Бесплатно</option>
-        </select>
-        <select class="selcet_age">
-            <option value="" disabled>Возраст</option>
-            <option value="1">От 6</option>
-            <option value="1">От 7</option>
-            <option value="1">От 8</option>
-            <option value="1">От 9</option>
-            <option value="1">От 10</option>
-            <option value="1">От 11</option>
-            <option value="1">От 12</option>
-            <option value="1">От 13</option>
-            <option value="1">От 14</option>
-            <option value="1">От 15</option>
-            <option value="1">От 16</option>
-            <option value="1">От 17</option>
-            <option value="1">От 18</option>
-            <option value="1">От 19</option>
-            <option value="1">От 20</option>
-            <option value="1">От 21</option>
-            <option value="1">От 22</option>
-            <option value="1">От 23</option>
-            <option value="1">От 24</option>
-            <option value="1">От 25</option>
-            <option value="1">От 26</option>
-            <option value="1">От 27</option>
-            <option value="1">От 28</option>
-            <option value="1">От 29</option>
-            <option value="1">От 30</option>
-            <option value="1">От 31</option>
-            <option value="1">От 32</option>
-            <option value="1">От 33</option>
-            <option value="1">От 34</option>
-            <option value="1">От 35</option>
-            <option value="1">От 36</option>
-            <option value="1">От 37</option>
-            <option value="1">От 38</option>
-            <option value="1">От 39</option>
-            <option value="1">От 40</option>
-            <option value="1">От 41</option>
-            <option value="1">От 42</option>
-            <option value="1">От 43</option>
-            <option value="1">От 44</option>
-            <option value="1">От 45</option>
-            <option value="1">От 46</option>
-            <option value="1">От 47</option>
-            <option value="1">От 48</option>
-            <option value="1">От 49</option>
-            <option value="1">От 50</option>
-            <option value="1">От 51</option>
-            <option value="1">От 52</option>
-            <option value="1">От 53</option>
-            <option value="1">От 54</option>
-            <option value="1">От 55</option>
-        </select>
-        <input class="inputdate" type="datetime-local" name="input-date" placeholder="Дата и время">
-        <input class="inputplace" type="dateplace" name="input-place" placeholder="Место">
-        <textarea class="inputtext" type="text">Описание: </textarea>
-        <div class="input__wrapper">
-            <input name="file" type="file" id="input__file" class="input input__file" multiple>
-            <label for="input__file" class="input__file-button">
-               <span class="input__file-button-text">Добавить изоображение</span>
-            </label>
-         </div>
-         <button type="button" class="btncreate">Создать</button>
+        <h2>Вопрос 2: Множественный выбор</h2>
+        <p>Выберите один или несколько вариантов ответа:</p>
+        <input type="checkbox" name="question2" value="option1"> Вариант 1<br>
+        <input type="checkbox" name="question2" value="option2"> Вариант 2<br>
+        <input type="checkbox" name="question2" value="option3"> Вариант 3<br>
 
+        <h2>Вопрос 3: Ввод с клавиатуры</h2>
+        <p>Введите ваш ответ:</p>
+        <input type="text" name="question3" placeholder="Ответ"><br>
 
-    </div>
-</div>
+        <input type="submit" value="Отправить">
+    </form>
+</body>
+</html>
 {% endblock %}
